@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>مقهى سيراد السحري: تزيين الكيك والبوبـا 🧁🧋</title>
+    <!-- خط تجوال العربي الناعم والدائري -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* لوحة الألوان الباستيل الحالمة: بيبي بلو ووردي ناعم */
+        :root {
+            --baby-blue-light: #e6f5ff;
+            --baby-blue: #bfe6ff;
+            --baby-blue-deep: #5ab2ff;
+            --pink-light: #ffeaf3;
+            --pink-pastel: #ffc4de;
+            --pink-deep: #ff69a8;
+            --cream: #fffdf9;
+            --lavender: #e8dcff;
+            --text-dark: #584361;
+            --text-muted: #8d7896;
+            --gold: #ffca4b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(155deg, var(--baby-blue-light) 0%, #f5f9ff 48%, var(--pink-light) 100%);
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            overflow-x: hidden;
+        }
+
+        /* الحاوية الرئيسية للمقهى */
+        .cafe-app {
+            width: 100%;
+            max-width: 640px;
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(14px);
+            border: 3px solid #ffffff;
+            border-radius: 30px;
+            box-shadow: 
+                0 16px 40px rgba(90, 178, 255, 0.16),
+                0 8px 24px rgba(255, 105, 168, 0.14);
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: relative;
+        }
+
+        /* الشريط العلوي: العنوان، القلوب، وتبديل الوضع */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .brand-pill {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--baby-blue), var(--pink-pastel));
+            padding: 6px 14px;
+            border-radius: 50px;
+            border: 2px solid #ffffff;
+            font-weight: 900;
+            font-size: 1rem;
+            color: var(--text-dark);
+            box-shadow: 0 4px 12px rgba(255, 105, 168, 0.15);
+        }
+
+        .stats-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hearts-badge {
+            background: #ffffff;
+            border: 2px solid var(--pink-pastel);
+            border-radius: 50px;
+            padding: 5px 14px;
+            font-weight: 900;
+            font-size: 0.95rem;
+            color: var(--pink-deep);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 4px 10px rgba(255, 196, 222, 0.25);
+        }
+
+        .mode-switch-btn {
+            background: #ffffff;
+            border: 2px solid var(--baby-blue);
+            border-radius: 50px;
+            padding: 6px 12px;
+            font-family: 'Tajawal', sans-serif;
+            font-weight: 800;
+            font-size: 0.84rem;
+            color: var(--baby-blue-deep);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .mode-switch-btn:hover {
+            background: var(--baby-blue-light);
+            transform: translateY(-1px);
+        }
+
+        .sound-btn {
+            background: #ffffff;
+            border: 2px solid var(--pink-pastel);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 1.05rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+        }
+
+        .sound-btn:hover {
+            transform: scale(1.08);
+        }
+
+        /* منطقة الزبون الكيوت وفقاعة الطلب */
+        .customer-zone {
+            background: linear-gradient(180deg, #dff2ff 0%, #fff0f7 100%);
+            border: 2.5px solid #ffffff;
+            border-radius: 24px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            position: relative;
+            min-height: 108px;
+        }
+
+        .customer-avatar-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 84px;
+        }
+
+        .customer-emoji {
+            font-size: 3.1rem;
+            line-height: 1;
+            filter: drop-shadow(0 6px 10px rgba(88, 67, 97, 0.15));
+            animation: gentleBob 2.4s ease-in-out infinite;
+        }
+
+        @keyframes gentleBob {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-5px) rotate(2deg); }
+        }
+
+        .customer-name {
+            background: #ffffff;
+            color: var(--text-dark);
+            font-size: 0.78rem;
+            font-weight: 800;
+            padding: 2px 10px;
+            border-radius: 20px;
+            margin-top: 4px;
+            border: 1.5px solid var(--pink-pastel);
+        }
+
+        /* فقاعة الطلب السحابية */
+        .order-bubble {
+            flex: 1;
+            background: #ffffff;
+            border: 2px solid var(--baby-blue);
+            border-radius: 20px;
+            padding: 8px 12px;
+            position: relative;
+            box-shadow: 0 6px 16px rgba(90, 178, 255, 0.12);
+        }
+
+        .order-title {
+            font-size: 0.82rem;
+            font-weight: 800;
+            color: var(--pink-deep);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .order-checklist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .order-chip {
+            background: var(--baby-blue-light);
+            border: 1.5px solid var(--baby-blue);
+            border-radius: 14px;
+            padding: 3px 9px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.25s ease;
+        }
+
+        .order-chip.matched {
+            background: #e4ffef;
+            border-color: #6ee7b7;
+            color: #15803d;
+            transform: scale(1.03);
+        }
+
+        /* منصة العرض التفاعلية (الكانفاس) للكيك والبوبـا */
+        .stage-container {
+            position: relative;
+            width: 100%;
+            height: 245px;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 2.5px solid #ffffff;
+            background: radial-gradient(circle at 50% 35%, #ffffff 0%, #e8f6ff 55%, #ffe5f1 100%);
+            box-shadow: inset 0 0 24px rgba(255, 196, 222, 0.25);
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* تبويبات خطوات التزيين */
+        .station-tabs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+        }
+
+        .tab-btn {
+            background: #ffffff;
+            border: 2px solid var(--baby-blue);
+            border-radius: 16px;
+            padding: 8px 4px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.84rem;
+            font-weight: 800;
+            color: var(--text-muted);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--pink-light), var(--baby-blue-light));
+            border-color: var(--pink-deep);
+            color: var(--pink-deep);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(255, 105, 168, 0.18);
+        }
+
+        /* شبكة الخيارات الكيوت لكل خطوة */
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            min-height: 76px;
+        }
+
+        .option-card {
+            background: #ffffff;
+            border: 2px solid #f0e6f5;
+            border-radius: 18px;
+            padding: 8px 4px;
+            font-family: 'Tajawal', sans-serif;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 4px 10px rgba(88, 67, 97, 0.05);
+        }
+
+        .option-card:hover {
+            transform: translateY(-2px) scale(1.03);
+            border-color: var(--baby-blue-deep);
+        }
+
+        .option-card.selected {
+            border-color: var(--pink-deep);
+            background: var(--pink-light);
+            box-shadow: 0 5px 14px rgba(255, 105, 168, 0.24);
+        }
+
+        .color-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        }
+
+        .option-emoji {
+            font-size: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .option-label {
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            text-align: center;
+        }
+
+        /* أزرار التقديم والاحتفال السفلية */
+        .action-bar {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .btn-reset {
+            background: #ffffff;
+            border: 2px solid var(--baby-blue);
+            color: var(--baby-blue-deep);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 800;
+            border-radius: 50px;
+            padding: 11px 18px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-reset:hover {
+            background: var(--baby-blue-light);
+        }
+
+        .btn-serve {
+            flex: 1;
+            background: linear-gradient(135deg, var(--pink-deep), #ff8ec0);
+            border: 3px solid #ffffff;
+            color: #ffffff;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 900;
+            border-radius: 50px;
+            padding: 11px 24px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(255, 105, 168, 0.35);
+            transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+        }
+
+        .btn-serve:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(255, 105, 168, 0.45);
+        }
+
+        .btn-serve:active {
+            transform: scale(0.97);
+        }
+
+        /* رسالة إشعار لطيفة عائمة */
+        .toast-banner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            background: rgba(255, 255, 255, 0.96);
+            border: 3px solid var(--pink-deep);
+            border-radius: 26px;
+            padding: 16px 26px;
+            text-align: center;
+            box-shadow: 0 14px 36px rgba(255, 105, 168, 0.32);
+            z-index: 20;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .toast-banner.show {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .toast-title {
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: var(--pink-deep);
+            margin-bottom: 4px;
+        }
+
+        .toast-desc {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        @media (max-width: 480px) {
+            .cafe-app { padding: 10px; border-radius: 24px; }
+            .stage-container { height: 215px; }
+            .customer-zone { padding: 8px 10px; min-height: 98px; }
+            .customer-emoji { font-size: 2.6rem; }
+            .option-label { font-size: 0.72rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cafe-app">
+        <!-- الشريط العلوي -->
+        <header class="top-bar">
+            <div class="brand-pill">
+                <span>🧁</span>
+                <span>مقهى سيراد السحري</span>
+            </div>
+
+            <div class="stats-group">
+                <div class="hearts-badge" title="قلوب السعادة">
+                    <span>💖</span>
+                    <span id="heartsCount">0</span>
+                </div>
+                <button id="modeSwitchBtn" class="mode-switch-btn" title="تبديل وضع اللعب">
+                    وضع الطلبات 🐰
+                </button>
+                <button id="soundBtn" class="sound-btn" title="تشغيل أو كتم الصوت">🎵</button>
+            </div>
+        </header>
+
+        <!-- منطقة الزبون الكيوت وفقاعة الطلب -->
+        <section id="customerZone" class="customer-zone">
+            <div class="customer-avatar-box">
+                <div id="customerEmoji" class="customer-emoji">🐰</div>
+                <span id="customerName" class="customer-name">الأرنوبة سيراد</span>
+            </div>
+
+            <div class="order-bubble">
+                <div class="order-title">
+                    <span id="orderHeaderText">✨ نفسي في كيك وبوبا بالمواصفات دي:</span>
+                    <span id="orderProgressBadge" style="color: var(--baby-blue-deep);">0/4</span>
+                </div>
+                <div id="orderChecklist" class="order-checklist">
+                    <!-- يتم تعبئة عناصر الطلب تلقائياً -->
+                </div>
+            </div>
+        </section>
+
+        <!-- منصة العرض التفاعلية للكيك والبوبـا -->
+        <main class="stage-container">
+            <canvas id="cafeCanvas"></canvas>
+
+            <!-- نافذة التهنئة عند تقديم الطلب -->
+            <div id="toastBanner" class="toast-banner">
+                <div id="toastTitle" class="toast-title">ياااي! يجنن 💖✨</div>
+                <div id="toastDesc" class="toast-desc">الأرنوبة سيراد مبسوطة جداً بالطلب!</div>
+            </div>
+        </main>
+
+        <!-- تبويبات خطوات التزيين الأربع -->
+        <nav class="station-tabs" aria-label="خطوات التزيين">
+            <button class="tab-btn active" data-tab="cakeBase">
+                <span>🍰</span>
+                <span>نكهة الكيك</span>
+            </button>
+            <button class="tab-btn" data-tab="frosting">
+                <span>🍦</span>
+                <span>الكريمة</span>
+            </button>
+            <button class="tab-btn" data-tab="topper">
+                <span>🎀</span>
+                <span>الزينة الكيوت</span>
+            </button>
+            <button class="tab-btn" data-tab="boba">
+                <span>🧋</span>
+                <span>مشروب البوبا</span>
+            </button>
+        </nav>
+
+        <!-- شبكة الخيارات لكل خطوة -->
+        <section id="optionsGrid" class="options-grid">
+            <!-- يتم توليد الخيارات ديناميكياً -->
+        </section>
+
+        <!-- أزرار التقديم وإعادة التزيين -->
+        <footer class="action-bar">
+            <button id="resetDesignBtn" class="btn-reset" title="مسح التزيين والبدء من جديد">
+                تزيين جديد 🔄
+            </button>
+            <button id="serveBtn" class="btn-serve">
+                تقديم الطلب للزبون 💖
+            </button>
+        </footer>
+    </div>
+
+    <script>
+        /**
+         * مقهى سيراد السحري: تزيين الكيك والبوبـا 🧁🧋
+         * لعبة تفاعلية إبداعية بألوان البيبي بلو والوردي الباستيل
+         */
+        (function () {
+            const canvas = document.getElementById('cafeCanvas');
+            const ctx = canvas.getContext('2d');
+            const stageContainer = canvas.parentElement;
+
+            const heartsCountEl = document.getElementById('heartsCount');
+            const modeSwitchBtn = document.getElementById('modeSwitchBtn');
+            const soundBtn = document.getElementById('soundBtn');
+            const customerZone = document.getElementById('customerZone');
+            const customerEmojiEl = document.getElementById('customerEmoji');
+            const customerNameEl = document.getElementById('customerName');
+            const orderHeaderText = document.getElementById('orderHeaderText');
+            const orderProgressBadge = document.getElementById('orderProgressBadge');
+            const orderChecklist = document.getElementById('orderChecklist');
+            const optionsGrid = document.getElementById('optionsGrid');
+            const serveBtn = document.getElementById('serveBtn');
+            const resetDesignBtn = document.getElementById('resetDesignBtn');
+            const toastBanner = document.getElementById('toastBanner');
+            const toastTitle = document.getElementById('toastTitle');
+            const toastDesc = document.getElementById('toastDesc');
+
+            // قاعدة بيانات المكونات اللطيفة بألوان البيبي بلو والوردي
+            const INGREDIENTS = {
+                cakeBase: [
+                    { id: 'pink_strawberry', label: 'كيك وردي', color: '#ffb3d4', shadow: '#ff85ba', emoji: '🍓' },
+                    { id: 'baby_blue', label: 'بيبي بلو', color: '#b3e2ff', shadow: '#7ac8ff', emoji: '☁️' },
+                    { id: 'lavender', label: 'لافندر', color: '#dfc9ff', shadow: '#c29eff', emoji: '🔮' },
+                    { id: 'vanilla_cream', label: 'فانيليا', color: '#fff3d6', shadow: '#ffe09e', emoji: '🌼' }
+                ],
+                frosting: [
+                    { id: 'whipped_pink', label: 'كريمة وردي', color: '#ff85ba', sprinkles: true, emoji: '🩷' },
+                    { id: 'blue_glaze', label: 'صوص أزرق', color: '#6ec2ff', sprinkles: true, emoji: '🩵' },
+                    { id: 'snow_cream', label: 'كريمة ثلجية', color: '#ffffff', sprinkles: true, emoji: '🤍' },
+                    { id: 'berry_swirl', label: 'توت سحري', color: '#c88cff', sprinkles: false, emoji: '💜' }
+                ],
+                topper: [
+                    { id: 'pink_bow', label: 'فيونكة', emoji: '🎀' },
+                    { id: 'bunny_ears', label: 'أذني أرنوب', emoji: '🐰' },
+                    { id: 'gold_star', label: 'نجمة ذهبية', emoji: '⭐' },
+                    { id: 'cherry', label: 'كرزة كيوت', emoji: '🍒' }
+                ],
+                boba: [
+                    { id: 'strawberry_milk', label: 'بوبا وردي', liquid: '#ffc2de', pearls: '#ff5c9d', straw: '#5ab2ff', emoji: '🩷' },
+                    { id: 'blue_sky_tea', label: 'بوبا أزرق', liquid: '#bae4ff', pearls: '#3b9eff', straw: '#ff69a8', emoji: '🩵' },
+                    { id: 'peach_cream', label: 'بوبا خوخي', liquid: '#ffe0cc', pearls: '#ff85a2', straw: '#9c7aff', emoji: '🍑' },
+                    { id: 'taro_milk', label: 'بوبا تارو', liquid: '#e4d4ff', pearls: '#9c6bff', straw: '#ff69a8', emoji: '🍇' }
+                ]
+            };
+
+            // قائمة الزبائن الكيوت في المقهى
+            const CUSTOMERS = [
+                { emoji: '🐰', name: 'الأرنوبة سيراد', greeting: 'نفسي في كيك وبوبا بالمواصفات دي:' },
+                { emoji: '🐱', name: 'القطة داريس', greeting: 'مياو! ممكن تحضريلي الطلب اللطيف ده؟' },
+                { emoji: '🧸', name: 'الدبدوب سداري', greeting: 'أهلاً! بحب الحلويات دي أوي:' },
+                { emoji: '🦄', name: 'يونيكورن اريسد', greeting: 'عايزة وصفة سحرية بالألوان دي:' },
+                { emoji: '🐥', name: 'الكتكوت يرساد', greeting: 'صوصو! ممكن أطلب الحاجات دي؟' }
+            ];
+
+            // حالة اللعبة الحالية
+            let heartsScore = 0;
+            let isCreativeMode = false;
+            let activeTab = 'cakeBase';
+            let soundEnabled = true;
+            let currentCustomerIndex = 0;
+            let currentOrder = {};
+
+            // التصميم الحالي الذي تصنعه اللاعبة على الطاولة
+            let currentDesign = {
+                cakeBase: 'pink_strawberry',
+                frosting: 'snow_cream',
+                topper: 'pink_bow',
+                boba: 'blue_sky_tea'
+            };
+
+            // متغيرات الأنيميشن والجزيئات الاحتفالية
+            let cakeBounce = 0;
+            let bobaBounce = 0;
+            let confettiParticles = [];
+            let ambientStars = [];
+
+            // استرجاع عدد القلوب المحفوظة
+            try {
+                const savedHearts = localStorage.getItem('luluCafeHearts');
+                if (savedHearts) {
+                    heartsScore = parseInt(savedHearts, 10) || 0;
+                    heartsCountEl.textContent = heartsScore;
+                }
+            } catch (e) {}
+
+            // نظام المؤثرات الصوتية اللطيفة (Web Audio API)
+            let audioCtx = null;
+            function initAudio() {
+                if (!audioCtx) {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    if (AudioContext) audioCtx = new AudioContext();
+                }
+                if (audioCtx && audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+            }
+
+            function playCuteSound(type) {
+                if (!soundEnabled) return;
+                try {
+                    initAudio();
+                    if (!audioCtx) return;
+
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    const now = audioCtx.currentTime;
+
+                    if (type === 'pop') {
+                        // صوت اختيار مكون لطيف
+                        osc.type = 'sine';
+                        osc.frequency.setValueAtTime(520, now);
+                        osc.frequency.exponentialRampToValueAtTime(780, now + 0.11);
+                        gain.gain.setValueAtTime(0.14, now);
+                        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.13);
+                        osc.start(now);
+                        osc.stop(now + 0.14);
+                    } else if (type === 'success') {
+                        // لحن احتفالي عند تقديم الطلب بنجاح
+                        osc.type = 'triangle';
+                        osc.frequency.setValueAtTime(523.25, now);
+                        osc.frequency.setValueAtTime(659.25, now + 0.09);
+                        osc.frequency.setValueAtTime(783.99, now + 0.18);
+                        osc.frequency.setValueAtTime(1046.50, now + 0.27);
+                        gain.gain.setValueAtTime(0.16, now);
+                        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.55);
+                        osc.start(now);
+                        osc.stop(now + 0.56);
+                    } else if (type === 'gentle') {
+                        osc.type = 'sine';
+                        osc.frequency.setValueAtTime(440, now);
+                        osc.frequency.exponentialRampToValueAtTime(554.37, now + 0.18);
+                        gain.gain.setValueAtTime(0.12, now);
+                        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.22);
+                        osc.start(now);
+                        osc.stop(now + 0.23);
+                    }
+                } catch (e) {}
+            }
+
+            // ضبط أبعاد الكانفاس
+            function resizeCanvas() {
+                const rect = stageContainer.getBoundingClientRect();
+                canvas.width = rect.width;
+                canvas.height = rect.height;
+
+                ambientStars = [];
+                for (let i = 0; i < 16; i++) {
+                    ambientStars.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * (canvas.height * 0.7),
+                        size: 2 + Math.random() * 3,
+                        phase: Math.random() * Math.PI * 2,
+                        color: i % 2 === 0 ? '#ffc4de' : '#9ad8ff'
+                    });
+                }
+            }
+
+            // توليد طلب عشوائي جديد لزبون جديد
+            function generateNewCustomerOrder() {
+                currentCustomerIndex = (currentCustomerIndex + 1) % CUSTOMERS.length;
+                const customer = CUSTOMERS[currentCustomerIndex];
+                customerEmojiEl.textContent = customer.emoji;
+                customerNameEl.textContent = customer.name;
+                orderHeaderText.textContent = `✨ ${customer.greeting}`;
+
+                const pickRandom = (arr) => arr[Math.floor(Math.random() * arr.length)].id;
+                currentOrder = {
+                    cakeBase: pickRandom(INGREDIENTS.cakeBase),
+                    frosting: pickRandom(INGREDIENTS.frosting),
+                    topper: pickRandom(INGREDIENTS.topper),
+                    boba: pickRandom(INGREDIENTS.boba)
+                };
+
+                renderOrderChecklist();
+            }
+
+            // تحديث قائمة التحقق في فقاعة طلب الزبون
+            function renderOrderChecklist() {
+                if (isCreativeMode) {
+                    orderChecklist.innerHTML = `
+                        <div class="order-chip matched">🎨 صممي الكيك والبوبـا على ذوقك بحرية كاملة!</div>
+                    `;
+                    orderProgressBadge.textContent = 'حر ✨';
+                    return;
+                }
+
+                const categories = ['cakeBase', 'frosting', 'topper', 'boba'];
+                let matchedCount = 0;
+                orderChecklist.innerHTML = '';
+
+                categories.forEach(cat => {
+                    const targetId = currentOrder[cat];
+                    const itemObj = INGREDIENTS[cat].find(i => i.id === targetId);
+                    const isMatched = currentDesign[cat] === targetId;
+                    if (isMatched) matchedCount++;
+
+                    const chip = document.createElement('div');
+                    chip.className = `order-chip ${isMatched ? 'matched' : ''}`;
+                    chip.innerHTML = `
+                        <span>${isMatched ? '✅' : itemObj.emoji}</span>
+                        <span>${itemObj.label}</span>
+                    `;
+                    orderChecklist.appendChild(chip);
+                });
+
+                orderProgressBadge.textContent = `${matchedCount}/4`;
+            }
+
+            // عرض بطاقات الاختيار للتبويب النشط
+            function renderOptionsForTab(tabKey) {
+                activeTab = tabKey;
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.tab === tabKey);
+                });
+
+                const items = INGREDIENTS[tabKey];
+                optionsGrid.innerHTML = '';
+
+                items.forEach(item => {
+                    const isSelected = currentDesign[tabKey] === item.id;
+                    const card = document.createElement('button');
+                    card.className = `option-card ${isSelected ? 'selected' : ''}`;
+
+                    let visualHTML = '';
+                    if (item.color || item.liquid) {
+                        const bg = item.color || item.liquid;
+                        visualHTML = `<div class="color-dot" style="background: ${bg};"></div>`;
+                    } else {
+                        visualHTML = `<div class="option-emoji">${item.emoji}</div>`;
+                    }
+
+                    card.innerHTML = `
+                        ${visualHTML}
+                        <span class="option-label">${item.label}</span>
+                    `;
+
+                    card.addEventListener('click', () => {
+                        currentDesign[tabKey] = item.id;
+                        if (tabKey === 'boba') {
+                            bobaBounce = 1;
+                        } else {
+                            cakeBounce = 1;
+                        }
+                        playCuteSound('pop');
+                        spawnSparkleBurst(
+                            tabKey === 'boba' ? canvas.width * 0.72 : canvas.width * 0.34,
+                            canvas.height * 0.52,
+                            12
+                        );
+                        renderOptionsForTab(tabKey);
+                        renderOrderChecklist();
+                    });
+
+                    optionsGrid.appendChild(card);
+                });
+            }
+
+            // إنشاء جزيئات قلوب ونجوم احتفالية
+            function spawnSparkleBurst(x, y, count = 20) {
+                const palette = ['#ff69a8', '#5ab2ff', '#ffca4b', '#ffffff', '#ffc4de'];
+                for (let i = 0; i < count; i++) {
+                    const angle = (Math.PI * 2 * i) / count + Math.random() * 0.4;
+                    const speed = 1.8 + Math.random() * 4;
+                    confettiParticles.push({
+                        x: x,
+                        y: y,
+                        vx: Math.cos(angle) * speed,
+                        vy: Math.sin(angle) * speed - 1.5,
+                        size: 4 + Math.random() * 5,
+                        color: palette[i % palette.length],
+                        alpha: 1,
+                        isHeart: i % 2 === 0
+                    });
+                }
+            }
+
+            // إظهار رسالة التهنئة اللطيفة
+            function showToast(title, desc) {
+                toastTitle.textContent = title;
+                toastDesc.textContent = desc;
+                toastBanner.classList.add('show');
+                setTimeout(() => {
+                    toastBanner.classList.remove('show');
+                }, 2100);
+            }
+
+            // تقديم الطلب للزبون أو الاحتفال بالتصميم الحر
+            function handleServeOrder() {
+                initAudio();
+                if (isCreativeMode) {
+                    playCuteSound('success');
+                    spawnSparkleBurst(canvas.width * 0.5, canvas.height * 0.45, 36);
+                    heartsScore += 5;
+                    updateHeartsDisplay();
+                    showToast('تحفة فنية كيوت! 📸✨', 'حصلتِ على +5 قلوب على إبداعك الجميل!');
+                    return;
+                }
+
+                // التحقق من مطابقة عناصر الطلب
+                const categories = ['cakeBase', 'frosting', 'topper', 'boba'];
+                let matched = 0;
+                categories.forEach(cat => {
+                    if (currentDesign[cat] === currentOrder[cat]) matched++;
+                });
+
+                if (matched === 4) {
+                    // طلب مثالي 100%!
+                    playCuteSound('success');
+                    heartsScore += 10;
+                    updateHeartsDisplay();
+                    spawnSparkleBurst(canvas.width * 0.35, canvas.height * 0.45, 25);
+                    spawnSparkleBurst(canvas.width * 0.72, canvas.height * 0.45, 25);
+                    const customer = CUSTOMERS[currentCustomerIndex];
+                    showToast(`ممتاز! +10 قلوب 💖`, `${customer.name} بتشكرك على الطلب المثالي!`);
+                    setTimeout(generateNewCustomerOrder, 1400);
+                } else {
+                    // تلميح لطيف جداً بدون أي توتر أو خسارة
+                    playCuteSound('gentle');
+                    showToast('قريبة جداً! 🌸', `طابقتِ ${matched} من 4 عناصر، راجعي فقاعة الطلب في الأعلى ✨`);
+                }
+            }
+
+            function updateHeartsDisplay() {
+                heartsCountEl.textContent = heartsScore;
+                try {
+                    localStorage.setItem('luluCafeHearts', heartsScore.toString());
+                } catch (e) {}
+            }
+
+            // رسم قلب صغير
+            function drawHeartShape(x, y, size, color, alpha) {
+                ctx.save();
+                ctx.globalAlpha = Math.max(0, alpha);
+                ctx.fillStyle = color;
+                ctx.translate(x, y);
+                ctx.beginPath();
+                ctx.moveTo(0, size * 0.3);
+                ctx.bezierCurveTo(-size, -size * 0.5, -size * 0.5, -size * 1.2, 0, -size * 0.4);
+                ctx.bezierCurveTo(size * 0.5, -size * 1.2, size, -size * 0.5, 0, size * 0.3);
+                ctx.fill();
+                ctx.restore();
+            }
+
+            // رسم الكيك الكيوت بتفاصيله (القاعدة، الكريمة، الوجه المبتسم، والزينة)
+            function drawKawaiiCake(cx, cy) {
+                const baseObj = INGREDIENTS.cakeBase.find(b => b.id === currentDesign.cakeBase);
+                const frostObj = INGREDIENTS.frosting.find(f => f.id === currentDesign.frosting);
+
+                const scaleBounce = 1 + Math.sin(cakeBounce * Math.PI) * 0.08;
+                ctx.save();
+                ctx.translate(cx, cy);
+                ctx.scale(scaleBounce, 2 - scaleBounce);
+
+                // صحن التقديم الباستيل الأنيق
+                ctx.fillStyle = '#ffffff';
+                ctx.shadowColor = 'rgba(90, 178, 255, 0.25)';
+                ctx.shadowBlur = 12;
+                ctx.beginPath();
+                ctx.ellipse(0, 56, 76, 16, 0, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.shadowBlur = 0;
+
+                ctx.strokeStyle = '#bfe6ff';
+                ctx.lineWidth = 2.5;
+                ctx.stroke();
+
+                // جسم الكيك الإسفنجي الناعم
+                const cakeW = 114;
+                const cakeH = 68;
+                ctx.fillStyle = baseObj.color;
+                ctx.beginPath();
+                ctx.roundRect(-cakeW / 2, -14, cakeW, cakeH, [18, 18, 14, 14]);
+                ctx.fill();
+
+                // ظل سفلي ناعم للكيك
+                ctx.fillStyle = baseObj.shadow;
+                ctx.beginPath();
+                ctx.roundRect(-cakeW / 2, 36, cakeW, 18, [0, 0, 14, 14]);
+                ctx.fill();
+
+                // طبقة الكريمة المتموجة في الأعلى
+                ctx.fillStyle = frostObj.color;
+                ctx.beginPath();
+                ctx.roundRect(-cakeW / 2 - 3, -18, cakeW + 6, 24, 14);
+                // قطرات الكريمة اللطيفة
+                const drips = [-42, -21, 0, 21, 42];
+                drips.forEach((dx, idx) => {
+                    const dripLen = idx % 2 === 0 ? 15 : 10;
+                    ctx.arc(dx, 6, 10.5, 0, Math.PI, false);
+                    ctx.roundRect(dx - 8, 2, 16, dripLen, 8);
+                });
+                ctx.fill();
+
+                // حبيبات السبرينكلز الملونة فوق الكريمة
+                if (frostObj.sprinkles) {
+                    const sprinkleColors = ['#ff69a8', '#5ab2ff', '#ffca4b', '#ffffff'];
+                    const coords = [[-32, -10], [-14, -12], [12, -11], [34, -9], [-22, -4], [24, -4]];
+                    coords.forEach(([sx, sy], i) => {
+                        ctx.fillStyle = sprinkleColors[i % sprinkleColors.length];
+                        ctx.beginPath();
+                        ctx.roundRect(sx - 3, sy - 1.5, 6, 3, 2);
+                        ctx.fill();
+                    });
+                }
+
+                // الوجه الكيوت المبتسم على الكيك!
+                // خدود وردية
+                ctx.fillStyle = 'rgba(255, 105, 168, 0.45)';
+                ctx.beginPath();
+                ctx.ellipse(-24, 24, 7, 4.5, 0, 0, Math.PI * 2);
+                ctx.ellipse(24, 24, 7, 4.5, 0, 0, Math.PI * 2);
+                ctx.fill();
+
+                // العيون اللامعة
+                ctx.fillStyle = '#584361';
+                ctx.beginPath();
+                ctx.arc(-15, 18, 3.8, 0, Math.PI * 2);
+                ctx.arc(15, 18, 3.8, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.fillStyle = '#ffffff';
+                ctx.beginPath();
+                ctx.arc(-16.2, 16.8, 1.3, 0, Math.PI * 2);
+                ctx.arc(13.8, 16.8, 1.3, 0, Math.PI * 2);
+                ctx.fill();
+
+                // ابتسامة صغيرة
+                ctx.strokeStyle = '#584361';
+                ctx.lineWidth = 2.4;
+                ctx.lineCap = 'round';
+                ctx.beginPath();
+                ctx.arc(0, 22, 5.5, 0.15 * Math.PI, 0.85 * Math.PI);
+                ctx.stroke();
+
+                // رسم الزينة العلوية المختارة (Topper)
+                drawCakeTopper(0, -24, currentDesign.topper);
+
+                ctx.restore();
+            }
+
+            // رسم الزينة العلوية فوق الكيك
+            function drawCakeTopper(x, y, topperId) {
+                ctx.save();
+                ctx.translate(x, y);
+
+                if (topperId === 'pink_bow') {
+                    // فيونكة وردية كيوت
+                    ctx.fillStyle = '#ff69a8';
+                    ctx.beginPath();
+                    ctx.ellipse(-12, 0, 12, 8, -0.25, 0, Math.PI * 2);
+                    ctx.ellipse(12, 0, 12, 8, 0.25, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.fillStyle = '#ff3d8e';
+                    ctx.beginPath();
+                    ctx.arc(0, 0, 5.5, 0, Math.PI * 2);
+                    ctx.fill();
+                } else if (topperId === 'bunny_ears') {
+                    // أذني أرنوب لطيفة بالوردي والأبيض
+                    [-13, 13].forEach((ex, idx) => {
+                        ctx.save();
+                        ctx.translate(ex, -8);
+                        ctx.rotate(idx === 0 ? -0.15 : 0.15);
+                        ctx.fillStyle = '#ffffff';
+                        ctx.beginPath();
+                        ctx.ellipse(0, 0, 7, 18, 0, 0, Math.PI * 2);
+                        ctx.fill();
+                        ctx.fillStyle = '#ffb3d4';
+                        ctx.beginPath();
+                        ctx.ellipse(0, 1, 3.8, 12, 0, 0, Math.PI * 2);
+                        ctx.fill();
+                        ctx.restore();
+                    });
+                } else if (topperId === 'gold_star') {
+                    ctx.font = '32px sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText('⭐', 0, -4);
+                } else if (topperId === 'cherry') {
+                    ctx.font = '30px sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText('🍒', 0, -4);
+                }
+
+                ctx.restore();
+            }
+
+            // رسم كوب مشروب البوبا الكيوت المرافق
+            function drawKawaiiBoba(bx, by) {
+                const bobaObj = INGREDIENTS.boba.find(b => b.id === currentDesign.boba);
+                const scaleBounce = 1 + Math.sin(bobaBounce * Math.PI) * 0.08;
+
+                ctx.save();
+                ctx.translate(bx, by);
+                ctx.scale(scaleBounce, 2 - scaleBounce);
+
+                // الشفاطة (Straw) الملونة
+                ctx.save();
+                ctx.translate(10, -46);
+                ctx.rotate(0.22);
+                ctx.fillStyle = bobaObj.straw;
+                ctx.beginPath();
+                ctx.roundRect(-5, -24, 10, 48, 5);
+                ctx.fill();
+                ctx.restore();
+
+                // السائل اللذيذ داخل الكوب
+                ctx.fillStyle = bobaObj.liquid;
+                ctx.beginPath();
+                ctx.moveTo(-30, -24);
+                ctx.lineTo(30, -24);
+                ctx.lineTo(23, 52);
+                ctx.quadraticCurveTo(22, 58, 15, 58);
+                ctx.lineTo(-15, 58);
+                ctx.quadraticCurveTo(-22, 58, -23, 52);
+                ctx.closePath();
+                ctx.fill();
+
+                // حبات البوبا اللؤلؤية في قاع الكوب
+                ctx.fillStyle = bobaObj.pearls;
+                const pearlCoords = [[-12, 48], [0, 50], [12, 48], [-6, 40], [7, 41]];
+                pearlCoords.forEach(([px, py]) => {
+                    ctx.beginPath();
+                    ctx.arc(px, py, 5, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+
+                // حدود الكوب الزجاجي الشفاف
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = 3;
+                ctx.beginPath();
+                ctx.moveTo(-32, -32);
+                ctx.lineTo(32, -32);
+                ctx.lineTo(24, 52);
+                ctx.quadraticCurveTo(23, 59, 15, 59);
+                ctx.lineTo(-15, 59);
+                ctx.quadraticCurveTo(-23, 59, -24, 52);
+                ctx.closePath();
+                ctx.stroke();
+
+                // غطاء القبة الشفاف أعلى الكوب
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.65)';
+                ctx.beginPath();
+                ctx.arc(0, -32, 32, Math.PI, 0, false);
+                ctx.fill();
+                ctx.stroke();
+
+                // وجه كيوت مبتسم على كوب البوبا
+                ctx.fillStyle = 'rgba(255, 105, 168, 0.45)';
+                ctx.beginPath();
+                ctx.ellipse(-13, 14, 4.5, 3, 0, 0, Math.PI * 2);
+                ctx.ellipse(13, 14, 4.5, 3, 0, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.fillStyle = '#584361';
+                ctx.beginPath();
+                ctx.arc(-8, 9, 2.8, 0, Math.PI * 2);
+                ctx.arc(8, 9, 2.8, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.strokeStyle = '#584361';
+                ctx.lineWidth = 2;
+                ctx.lineCap = 'round';
+                ctx.beginPath();
+                ctx.arc(0, 12, 4, 0.15 * Math.PI, 0.85 * Math.PI);
+                ctx.stroke();
+
+                ctx.restore();
+            }
+
+            // حلقة الرسم الرئيسية للمنصة
+            function renderLoop() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // رسم النجوم الباستيل المتلألئة في الخلفية
+                ambientStars.forEach(s => {
+                    s.phase += 0.04;
+                    const alpha = 0.35 + Math.sin(s.phase) * 0.3;
+                    ctx.save();
+                    ctx.globalAlpha = Math.max(0.1, alpha);
+                    ctx.fillStyle = s.color;
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                });
+
+                // رسم مفرش طاولة المقهى الباستيل في الأسفل
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.65)';
+                ctx.beginPath();
+                ctx.roundRect(14, canvas.height * 0.68, canvas.width - 28, canvas.height * 0.28, 20);
+                ctx.fill();
+
+                // تحديث ارتداد الحركة اللطيف عند تغيير المكونات
+                if (cakeBounce > 0) {
+                    cakeBounce = Math.max(0, cakeBounce - 0.08);
+                }
+                if (bobaBounce > 0) {
+                    bobaBounce = Math.max(0, bobaBounce - 0.08);
+                }
+
+                // رسم الكيك على اليسار وكوب البوبا على اليمين
+                drawKawaiiCake(canvas.width * 0.36, canvas.height * 0.56);
+                drawKawaiiBoba(canvas.width * 0.73, canvas.height * 0.55);
+
+                // رسم القلوب والبريق المتطاير
+                for (let i = confettiParticles.length - 1; i >= 0; i--) {
+                    const p = confettiParticles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.vy += 0.08;
+                    p.alpha -= 0.022;
+
+                    if (p.alpha <= 0) {
+                        confettiParticles.splice(i, 1);
+                        continue;
+                    }
+
+                    if (p.isHeart) {
+                        drawHeartShape(p.x, p.y, p.size * 1.4, p.color, p.alpha);
+                    } else {
+                        ctx.save();
+                        ctx.globalAlpha = Math.max(0, p.alpha);
+                        ctx.fillStyle = p.color;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                        ctx.fill();
+                        ctx.restore();
+                    }
+                }
+
+                requestAnimationFrame(renderLoop);
+            }
+
+            // ربط أحداث التبويبات والأزرار
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    playCuteSound('pop');
+                    renderOptionsForTab(btn.dataset.tab);
+                });
+            });
+
+            serveBtn.addEventListener('click', handleServeOrder);
+
+            resetDesignBtn.addEventListener('click', () => {
+                playCuteSound('pop');
+                currentDesign = {
+                    cakeBase: 'vanilla_cream',
+                    frosting: 'snow_cream',
+                    topper: 'cherry',
+                    boba: 'strawberry_milk'
+                };
+                cakeBounce = 1;
+                bobaBounce = 1;
+                renderOptionsForTab(activeTab);
+                renderOrderChecklist();
+            });
+
+            // زر التبديل بين وضع الطلبات ووضع الإبداع الحر
+            modeSwitchBtn.addEventListener('click', () => {
+                isCreativeMode = !isCreativeMode;
+                playCuteSound('pop');
+                if (isCreativeMode) {
+                    modeSwitchBtn.textContent = 'وضع الإبداع الحر 🎨';
+                    customerEmojiEl.textContent = '🧚‍♀️';
+                    customerNameEl.textContent = 'استوديو الإبداع';
+                    orderHeaderText.textContent = '🎨 صممي كيك وبوبا بألوانك المفضلة:';
+                    serveBtn.textContent = 'التقاط صورة للذكرى 📸✨';
+                } else {
+                    modeSwitchBtn.textContent = 'وضع الطلبات 🐰';
+                    serveBtn.textContent = 'تقديم الطلب للزبون 💖';
+                    generateNewCustomerOrder();
+                }
+                renderOrderChecklist();
+            });
+
+            soundBtn.addEventListener('click', () => {
+                soundEnabled = !soundEnabled;
+                soundBtn.textContent = soundEnabled ? '🎵' : '🔇';
+                if (soundEnabled) initAudio();
+            });
+
+            window.addEventListener('resize', resizeCanvas);
+
+            // التهيئة عند تحميل الصفحة
+            window.onload = function () {
+                resizeCanvas();
+                generateNewCustomerOrder();
+                renderOptionsForTab('cakeBase');
+                renderLoop();
+            };
+        })();
+    </script>
+</body>
+</html>
